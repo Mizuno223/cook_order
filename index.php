@@ -1,23 +1,24 @@
-<?php
-class Menu 
-{
-    public $name;
+<?php require('data.php'); ?>
 
-    function __construct() {
-        echo '１つのメニューが作られました'."\n";
-    }
-    function hello() {
-        echo '私は'.$this->name.'です'."\n";
-    }
-}
+<!DOCTYPE html>
+<html>
 
-$curry = new Menu();
-$curry->name = 'curry';
-$curry->hello();
+<head>
+    <meta charset="utf-8">
+    <title>Café Progate</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Pacifico|Lato' rel='stylesheet' type='text/css'>
+</head>
 
-$pasta = new Menu();
-$pasta->name = 'pasta';
+<body>
+    <div class="menu-wrapper container">
+        <h1 class="logo">Café Progate</h1>
+        <div class="menu-items">
+            <?php foreach ($menus as $menu) : ?>
+                <h3 class="menu-item-name"><?php echo $menu->name ?></h3>
+            <?php endforeach ?>
+        </div>
+    </div>
+</body>
 
-//echo $curry->name;
-echo "\n";
-?>
+</html>
