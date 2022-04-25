@@ -2,11 +2,22 @@
 class Menu 
 {
     public $name;
+
+    function __construct() {
+        echo '１つのメニューが作られました'."\n";
+    }
+    function hello() {
+        echo '私は'.$this->name.'です'."\n";
+    }
 }
 
 $curry = new Menu();
 $curry->name = 'curry';
-//$pasta = new Menu();
+$curry->hello();
 
-echo $curry->name;
+$pasta = new Menu();
+$pasta->name = 'pasta';
+
+//echo $curry->name;
+echo "\n";
 ?>
