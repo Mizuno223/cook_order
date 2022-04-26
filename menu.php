@@ -32,5 +32,8 @@ class Menu
         return floor($this->price * 1.1);
     }
 
+    public function getTotalPrice() {
+        return $this->getTaxIncludedPrice() * $this->getOrderCount();
+    }
 }
 ?>
