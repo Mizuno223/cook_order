@@ -1,16 +1,25 @@
 <?php
 class Menu 
 {
-    public $name;
-    public $price;
-    public $image;
+    private $name;
+    private $price;
+    private $image;
 
     function __construct($name, $price, $image) {
         $this->name = $name;
         $this->price = $price;
         $this->image = $image;
     }
-    function getTaxIncludedPrice() {
+
+    public function getName() {
+        return $this->name;
+    }
+
+    public function getImage() {
+        return $this->image;
+    }
+
+    public function getTaxIncludedPrice() {
         return floor($this->price * 1.1);
     }
 }
