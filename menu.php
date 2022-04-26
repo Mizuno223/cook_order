@@ -10,8 +10,8 @@ class Menu
         $this->price = $price;
         $this->image = $image;
     }
-    function hello() {
-        echo '私は'.$this->name.'です'."\n";
+    function getTaxIncludedPrice() {
+        return floor($this->price * 1.1);
     }
 }
 ?>
