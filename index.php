@@ -1,4 +1,7 @@
-<?php require('data.php'); ?>
+<?php 
+require('data.php');
+require('menu.php');
+?>
 
 <!DOCTYPE html>
 <html>
