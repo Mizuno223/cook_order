@@ -16,7 +16,7 @@ require_once('menu.php');
 <body>
     <div class="menu-wrapper container">
         <h1 class="logo">Café Progate</h1>
-        <h3>メニュー<?php echo Menu::$count ?>品</h3>
+        <h3>メニュー<?php echo Menu::getCount() ?>品</h3>
         <form action="confirm.php" method="post">
             <div class="menu-items">
                 <?php foreach ($menus as $menu) : ?>
